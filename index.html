@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Updates are underway</title>
+        <title>Update is underway</title>
 
-        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+        <script src="js/script.js" defer></script>
     </head>
 
     <body>
-        <p>Test 2</p>
+        <section>
+            <div class="console">
+                <div class="console-title">
+                    <div class="tab">
+                        <div><i>>.. </i>Upgrade OS</div>
+                    </div>
+                </div>
+                <div class="command-line">
+                    <div class="system-info">
+                        <p><b>System information</b><br>
+                            [Info] System name: xxx<br>
+                            [Info] Version: 30.370<br>
+                            [Info] Status: unknown
+                        </p>
+                    </div>
+                    <div class="warning">
+                        <p><b>⚠ Action required</b><br>
+                            [Err] Invalid version number<br>
+                            [Err] Upgrade to latest version
+                        </p>
+                    </div>
+                    <div class="console-input">
+                        <p class="cli-command">~\ > sudo nixos-rebuild switch --upgrade</p>
+                        <button id="start-update" onclick="window.location.href='level-one.html'">Start update</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>

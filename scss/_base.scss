@@ -1,6 +1,58 @@
 @use 'variables' as *;
 
 body {
-    background-color: $black;
+    background-color: $bg-grey;
     color: $cyber-green;
+
+    .console{
+        color: $white;
+        padding: 1rem, 0rem;
+        
+        .console-title {
+            border: 2px solid $black;
+            border-radius: 0.5rem 0.5rem 0 0;
+            .tab {
+                border-radius: 0.5rem 0.5rem 0 0;
+                background-color: $black;
+                div {
+                    padding: 0.1rem 0.5rem;
+                }
+            }
+        }
+
+        .command-line {
+            background-color: $black;
+            border-radius: 0 0 0.5rem 0.5rem;
+            padding: 0.2rem;
+            
+            .system-info {
+                color: $lemon;
+            }
+
+            .warning{
+                color: $error;
+            }
+
+            .console-input {
+                border: none;
+                display: block;
+                box-sizing: border-box;
+                padding-top: 1rem;
+                width: 100%;
+                background-color: inherit;
+                color: $cyber-green;    
+
+                .cli-command {
+                    visibility: hidden;
+                }
+            }
+
+            button {
+                display: block;
+                margin-left: auto;
+                margin-top: auto;
+            }
+
+        }
+    }
 }
