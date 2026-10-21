@@ -7,7 +7,7 @@ body {
     .console{
         color: $white;
         margin-top: 3rem;
-        padding: 1rem, 0rem;
+        padding: 1rem 0rem;
         
         .console-title {
             border: 2px solid $black;
@@ -34,8 +34,10 @@ body {
                 color: $error;
             }
 
+            .console-input, 
             .nix-config,
-            .console-input {
+            .sudo-command
+            {
                 border: none;
                 display: block;
                 box-sizing: border-box;

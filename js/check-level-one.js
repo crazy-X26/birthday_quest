@@ -1,8 +1,8 @@
-const button = document.getElementById("start-update");
+const button = document.getElementById("start-build");
 
 async function checkInput() {
     let input = document.getElementById("config-input").value;
-    console.log(input);
+    
     if (input.length > 6) {
         window.location.href = "level-two.html";
     } else {
