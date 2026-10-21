@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Level 2</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="icon" href="assets/favicon.svg" />
+
+        <script src="js/check-level-two.js" defer></script>
+    </head>
+
+    <body>
+        <h3>sudo password</h3>
+        <p>Nice work! The configuration was build successfully.<br>
+            Enter the sudo password to upgrade your OS.<br>
+            Hint: The answer is hidden in plain sight.
+        </p>
+        <section>
+            <div class="console">
+                <div class="console-title">
+                    <div class="tab">
+                        <div><i>>.. </i>Upgrade OS</div>
+                    </div>
+                </div>
+                <div class="command-line">
+                    <div class="system-info">
+                        <p><b>System information</b><br>
+                            [Info] System name: xxx<br>
+                            [Info] Version: 30.370<br>
+                            [Info] Status: unknown
+                        </p>
+                    </div>
+                    <div class="sudo-command">
+                        <p>user@OS:~$ sudo nixos-rebuild switch --upgrade</p>
+                        <p>sudo pw for user > <input id="sudo-pw" class="sudo-pw" type="text" value=""></input></p>
+                        <button id="start-update" onclick="window.location.href='level-two.html'">Enter PW</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

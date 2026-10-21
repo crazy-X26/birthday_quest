@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Level 1</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
+
+        <script src="/js/check-level-one.js" defer></script>
+    </head>
+
+    <body>
+        <h3>Faulty configuration.nix</h3>
+        <p>Insert the missing attribute to the configuration.nix <br>
+            and start the build to validate your changes.
+        </p>
+        <section>
+            <div class="console">
+                <div class="console-title">
+                    <div class="tab">
+                        <div><i>>.. </i>Upgrade OS</div>
+                    </div>
+                </div>
+                <div class="command-line">
+                    <div class="nix-config">
+                        <p># Edit this configuration file to define what should be installed on your system.<br>
+                            { config, pkgs, ... }:<br>
+                            {<br>
+                                imports = <br>
+                                    [ # Include the results of the hardware scan.<br>
+                                      ./hardware-configuration.nix  <br>
+                                    ];<br><br>
+                                
+                                networking.hostname = "xxx"<br>
+                                networking.networkmanager.enable = true;<br><br>
+
+                                time.timeZone = "Europe.Berlin";<br><br>
+                                
+                                users.users."xxx" = {<br>
+                                    description = "birthday creature";<br>
+                                    favouriteDrinks = [ "Guinness" "Crljenak Kaštelanski" "Maisel's Weisse"];<br>
+                                    chronotype = "night owl";<br>
+                                    karateka = <input id="config-input" class="config-input" type="text" maxlength="16" value="" />;<br>
+                                }<br><br>
+
+                                programs.partymode.enable = true;<br>
+                            }
+                        </p>
+                    </div>
+                    <div class="console-input">
+                        <p class="cli-command">user@OS:~$ sudo nixos-rebuild switch --upgrade</p>
+                        <button id="start-build">Start build</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

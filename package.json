@@ -16,7 +16,7 @@
   "scripts": {
     "sass": "sass:css",
     "sass:watch": "sass --watch scss:css",
-    "dev": "concurrently \"npm run sass --watch scss:css\" \"vite\"",
+    "dev": "concurrently \"npm run sass:watch\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview"
   },
