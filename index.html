@@ -8,10 +8,14 @@
 
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="icon" type="image/x-icon" href="assets/favicon.svg" />
-        <script src="js/script.js" defer></script>
+        <script src="js/typing-text.js" defer></script>
     </head>
 
     <body>
+        <h3>Your OS is running unhealthy!</h3>
+        <p>Check the system information and logs carefully.<br>
+           Edit the configuration.nix and update your OS afterwards.
+        </p>
         <section>
             <div class="console">
                 <div class="console-title">
@@ -34,8 +38,8 @@
                         </p>
                     </div>
                     <div class="console-input">
-                        <p class="cli-command">~\ > sudo nixos-rebuild switch --upgrade</p>
-                        <button id="start-update" onclick="window.location.href='level-one.html'">Start update</button>
+                        <p class="cli-command">user@nix:~$ nano /etc/nixos/configuration.nix</p>
+                        <button id="fix-config" onclick="window.location.href='level-one.html'">Fix config</button>
                     </div>
                 </div>
             </div>

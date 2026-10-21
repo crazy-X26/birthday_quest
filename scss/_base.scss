@@ -2,10 +2,11 @@
 
 body {
     background-color: $bg-grey;
-    color: $cyber-green;
+    color: $white;
 
     .console{
         color: $white;
+        margin-top: 3rem;
         padding: 1rem, 0rem;
         
         .console-title {
@@ -33,6 +34,7 @@ body {
                 color: $error;
             }
 
+            .nix-config,
             .console-input {
                 border: none;
                 display: block;
