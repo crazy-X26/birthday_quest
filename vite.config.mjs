@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import { resolve } from 'node:path'
 
 export default defineConfig({
+  base: '/birthday_quest/',
+  
   build: {
     rolldownOptions: {
       input: {
