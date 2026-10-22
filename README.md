@@ -1,3 +1,5 @@
+![Deployment Status](https://github.com/crazy-X26/birthday_quest/actions/workflows/main.yml/badge.svg)
+
 # Birthday Quest
 
 A little birthday quest to upgrade your age.
