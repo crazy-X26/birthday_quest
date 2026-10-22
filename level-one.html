@@ -15,7 +15,8 @@
     <body>
         <h3>Faulty configuration.nix</h3>
         <p>Insert the missing attribute to the configuration.nix <br>
-            and start the build to validate your changes.
+            and start the build to validate your changes. <br>
+            <i>Hint: Pay attention to the packages.</i>
         </p>
         <section>
             <div class="console">
@@ -34,19 +35,19 @@
                                       ./hardware-configuration.nix  <br>
                                     ];<br><br>
                                 
-                                networking.hostname = "xxx"<br>
+                                networking.hostname = "birthdayOS"<br>
                                 networking.networkmanager.enable = true;<br><br>
 
                                 time.timeZone = "Europe.Berlin";<br><br>
                                 
-                                users.users."xxx" = {<br>
-                                    description = "birthday creature";<br>
+                                users.users."birthdayCreature" = {<br>
                                     favouriteDrinks = [ "Guinness" "Crljenak Kaštelanski" "Maisel's Weisse"];<br>
                                     chronotype = "night owl";<br>
                                     karateka = <input id="config-input" class="config-input" type="text" maxlength="16" value="" />;<br>
                                 }<br><br>
 
-                                programs.partymode.enable = true;<br>
+                                <b>programs.partymode.enable = true;<br>
+                                programs.birthday-gift.enable = true;</b><br>
                             }
                         </p>
                     </div>
