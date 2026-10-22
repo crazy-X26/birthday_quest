@@ -1,8 +1,21 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'node:path'
+import { mkdir, writeFile } from 'node:fs/promises'
+import sass from 'sass'
 
 export default defineConfig({
   base: '/birthday_quest/',
+
+  plugins: [
+    {
+      name: 'compile-scss',
+      async buildStart() {
+        const result = sass.compile('scss/styles.scss')
+        await mkdir('css', { recursive: true })
+        await writeFile('css/styles.css', result.css)
+      },
+    },
+  ],
   
   build: {
     rolldownOptions: {
