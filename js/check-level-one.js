@@ -1,9 +1,9 @@
 const button = document.getElementById("start-build");
+const input = document.getElementById("config-input");
 
-async function checkInput() {
-    let input = document.getElementById("config-input").value;
-    
-    if (input.length > 6) {
+async function checkInput() { 
+    if (input.value.trim().toLowerCase() == "kyokushin") {
+        sessionStorage.setItem("levelOnePassed", "true");
         window.location.href = "level-two.html";
     } else {
         window.location.href = "level-one.html";
@@ -12,3 +12,4 @@ async function checkInput() {
 }
 
 button.addEventListener("click", checkInput);
+input.addEventListener("keydown", e => { if (e.key === 'Enter') {checkInput()}});
